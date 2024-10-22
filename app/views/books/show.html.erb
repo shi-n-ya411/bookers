@@ -1,7 +1,7 @@
-<p><storong>Title:</storong><%= @book.title %></p>
+<p class="bookshow"><storong>Title:</storong><%= @book.title %></p>
 
-<p><storong>Body:</storong><%= @book.body %></p>
+<p class="bookshow"><storong>Body:</storong><%= @book.body %></p>
 
 <p><%= link_to "Edit", edit_book_path(@book) %>
 |
-<%= link_to "Back", '/books/index' %></p>
+<%= link_to "Back", books_path %></p>

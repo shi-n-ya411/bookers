@@ -11,16 +11,9 @@ class BooksController < ApplicationController
     @books = Book.all.order(created_at: :asc)
   end
 
-  # def show
-  #   @book = Book.find(params[:id])
-  # end
   def show
-  @book = Book.find_by(id: params[:id])
-    if @book.nil?
-    redirect_to books_path
-    end
-  end 
-
+    @book = Book.find(params[:id])
+  end
 
   def edit
     @book = Book.find(params[:id])

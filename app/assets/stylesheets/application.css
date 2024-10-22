@@ -19,3 +19,37 @@
   box-sizing: border-box;
 }
 
+
+/*ーーーーーindexのページーーーーー*/
+
+.toph {
+  margin: 35px;
+}
+
+.textitem
+{
+  margin: 30px;
+  margin-left: 90px;
+}
+
+.list1{
+  width: 15%;
+}
+
+.list2 {
+  width: 30%;
+}
+
+.list3 {
+  width: 15%;
+}
+
+.tditem {
+  margin-left: 50px;
+}
+
+.nb {
+  margin-left: 50px;
+}
+
+/*ーーーーーshowのページーーーーー*/

@@ -1,7 +1,5 @@
 <h1><strong>Books</strong></h1>
 
-
-
 <table>
   <thead>
     <tr>
@@ -18,7 +16,6 @@
           <td><%= book.body %></td>
           <td><%= link_to "Show", "/books/#{book.id}" %></td>
           <td><%= link_to "Edit", edit_book_path(book) %></td>
-          
           <td><%= link_to "Destroy", book, method: :delete, data: { confirm: "Are you sure you want to delete?" } %></td>
         </tr>
       <% end %>

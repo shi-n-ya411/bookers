@@ -12,9 +12,16 @@ class BooksController < ApplicationController
     
   end
 
+  # def show
+  #   @book = Book.find(params[:id])
+  # end
   def show
-    @book = Book.find(params[:id])
-  end
+  @book = Book.find_by(id: params[:id])
+    if @book.nil?
+    redirect_to books_path
+    end
+  end 
+
 
   def edit
     @book = Book.find(params[:id])

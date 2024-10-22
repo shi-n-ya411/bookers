@@ -23,11 +23,18 @@
 
 </table>
 
-
-
-
-
 <div class="nb"><h1>New book</h1>
+<div>
+  <% if @book.errors.any? %>
+    <%= @book.errors.count %>errors prohibited this book from being saved
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
   <h4>title</h4>

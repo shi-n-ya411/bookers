@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
+      flash[:notice] = "Your post has been successfully submitted."
       redirect_to book_path(@book.id)
     else
       @books = Book.all
@@ -33,6 +34,7 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
+      flash[:notice] = "Your edit has been successfully completed."
       redirect_to book_path(@book.id)
     else
       render :edit
@@ -43,6 +45,7 @@ class BooksController < ApplicationController
   def destroy
     book = Book.find(params[:id])
     book.destroy
+    flash[:notice] = "Your deletion has been successfully completed."
     redirect_to books_path
   end
 

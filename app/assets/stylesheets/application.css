@@ -72,3 +72,11 @@
   margin-left: 25px;
   margin-top: 25px;
 }
+
+/*ーーーーーフラッシュメッセージーーーーー*/
+
+.flash {
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #7fffd4;
+}
